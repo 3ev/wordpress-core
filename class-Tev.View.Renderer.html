@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Tev\View\Renderer | Tev core Wordpress library API</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?260161822">
+	<link rel="stylesheet" href="resources/style.css?2291698064">
+
+</head>
+
+<body>
+	<div id="navigation" class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a href="index.html" class="brand">Tev core Wordpress library API</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li>
+							<a href="namespace-Tev.View.html" title="Summary of Tev\View"><span>Namespace</span></a>
+						</li>
+						<li class="active">
+<span>Class</span>						</li>
+
+						<li class="divider-vertical"></li>
+
+						<li>
+							<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+						</li>
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="">
+			<input type="hidden" name="ie" value="UTF-8">
+			<input type="text" name="q" class="search-query" placeholder="Search">
+		</form>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active main"><a href="namespace-Tev.html">Tev<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Application.html">Application<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Application.Bootstrap.html">Bootstrap</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Author.html">Author<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Author.Model.html">Model</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Contracts.html">Contracts</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Field.html">Field<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Field.Model.html">Model</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Field.Util.html">Util</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Plugin.html">Plugin<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Plugin.Action.html">Action</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Plugin.Shortcode.html">Shortcode</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Post.html">Post<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Post.Model.html">Model</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Post.Repository.html">Repository</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Taxonomy.html">Taxonomy<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Taxonomy.Model.html">Model</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Taxonomy.Repository.html">Repository</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Term.html">Term<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Term.Model.html">Model</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Term.Repository.html">Repository</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Util.html">Util</a>
+						</li>
+				<li class="active main"><a href="namespace-Tev.View.html">View<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.View.Exception.html">Exception</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Tev.View.Renderer.html">Renderer</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class Renderer</h1>
+
+
+	<div class="description">
+	<p>Simple buffer-based view renderer.</p>
+
+<p>Will search for template files in the configured template dir first,
+and then fallback to the current theme directory.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		<b>Namespace:</b> Tev\View<br>
+		
+
+		<b>Located at</b> <a href="source-class-Tev.View.Renderer.html#6-82" title="Go to source code">Tev/View/Renderer.php</a><br>
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-Tev.View.Renderer.html#28-38" title="Go to source code">__construct</a>( <span>string <var>$templateDir</var></span> )</code>
+
+			<div class="description short">
+				<p>Constructor.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Constructor.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$templateDir</var></dt>
+						<dd>Template directory
+</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="render" id="_render">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_render">#</a>
+			<code><a href="source-class-Tev.View.Renderer.html#40-70" title="Go to source code">render</a>( <span>string <var>$filename</var></span>, <span>array <var>$vars</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+			<div class="description short">
+				<p>Renders a template file.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Renders a template file.</p>
+
+<p>Assigns all $var keys to $this->$key for us in template.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$filename</var></dt>
+						<dd>Full-filename
+</dd>
+						<dt><var>$vars</var></dt>
+						<dd>View variables
+</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>Rendered view
+
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Tev.View.Exception.NotFoundException.html">Tev\View\Exception\NotFoundException</a></code><br>If view file not found
+
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__get" id="___get">
+
+			<td class="attributes"><code>
+				 public 
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___get">#</a>
+			<code><a href="source-class-Tev.View.Renderer.html#72-81" title="Go to source code">__get</a>( <span>string <var>$name</var></span> )</code>
+
+			<div class="description short">
+				<p>Magic getter, for getting view variables.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Magic getter, for getting view variables.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd>View variable name
+</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed</code><br>View variable, or null if not set
+
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Tev core Wordpress library API API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js?371644040"></script>
+<script src="elementlist.js?2676970085"></script>
+</body>
+</html>

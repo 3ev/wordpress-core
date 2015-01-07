@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Tev\Field\Model\FlexibleContentField | Tev core Wordpress library API</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?260161822">
+	<link rel="stylesheet" href="resources/style.css?2291698064">
+
+</head>
+
+<body>
+	<div id="navigation" class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a href="index.html" class="brand">Tev core Wordpress library API</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li>
+							<a href="namespace-Tev.Field.Model.html" title="Summary of Tev\Field\Model"><span>Namespace</span></a>
+						</li>
+						<li class="active">
+<span>Class</span>						</li>
+
+						<li class="divider-vertical"></li>
+
+						<li>
+							<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+						</li>
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="">
+			<input type="hidden" name="ie" value="UTF-8">
+			<input type="text" name="q" class="search-query" placeholder="Search">
+		</form>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active main"><a href="namespace-Tev.html">Tev<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Application.html">Application<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Application.Bootstrap.html">Bootstrap</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Author.html">Author<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Author.Model.html">Model</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Contracts.html">Contracts</a>
+						</li>
+				<li class="active main"><a href="namespace-Tev.Field.html">Field<span></span></a>
+						<ul>
+				<li class="active main"><a href="namespace-Tev.Field.Model.html">Model</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Field.Util.html">Util</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Plugin.html">Plugin<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Plugin.Action.html">Action</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Plugin.Shortcode.html">Shortcode</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Post.html">Post<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Post.Model.html">Model</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Post.Repository.html">Repository</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Taxonomy.html">Taxonomy<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Taxonomy.Model.html">Model</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Taxonomy.Repository.html">Repository</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Term.html">Term<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Term.Model.html">Model</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Term.Repository.html">Repository</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Util.html">Util</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.View.html">View<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.View.Exception.html">Exception</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Tev.Field.Model.AbstractField.html">AbstractField</a></li>
+				<li><a href="class-Tev.Field.Model.BasicField.html">BasicField</a></li>
+				<li><a href="class-Tev.Field.Model.DateField.html">DateField</a></li>
+				<li><a href="class-Tev.Field.Model.FileField.html">FileField</a></li>
+				<li class="active"><a href="class-Tev.Field.Model.FlexibleContentField.html">FlexibleContentField</a></li>
+				<li><a href="class-Tev.Field.Model.GoogleMapField.html">GoogleMapField</a></li>
+				<li><a href="class-Tev.Field.Model.ImageField.html">ImageField</a></li>
+				<li><a href="class-Tev.Field.Model.NullField.html">NullField</a></li>
+				<li><a href="class-Tev.Field.Model.PostField.html">PostField</a></li>
+				<li><a href="class-Tev.Field.Model.RepeaterField.html">RepeaterField</a></li>
+				<li><a href="class-Tev.Field.Model.SelectField.html">SelectField</a></li>
+				<li><a href="class-Tev.Field.Model.TaxonomyField.html">TaxonomyField</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class FlexibleContentField</h1>
+
+
+	<div class="description">
+	<p>Flexible content field.</p>
+
+<p>An iterable field which provides access to underlying grouped sets of
+fields.</p>
+
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+			<a href="class-Tev.Field.Model.AbstractField.html"><span>Tev\Field\Model\AbstractField</span></a>
+			
+			 implements 
+				<a href="class-Tev.Contracts.WordpressWrapperInterface.html"><span>Tev\Contracts\WordpressWrapperInterface</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-Tev.Field.Model.RepeaterField.html"><span>Tev\Field\Model\RepeaterField</span></a>
+			
+			 implements 
+<span>ArrayAccess</span>, 
+			
+<span>Iterator</span>, 
+			
+<span>Countable</span>
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Tev\Field\Model\FlexibleContentField</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		<b>Namespace:</b> Tev\Field\Model<br>
+		
+
+		<b>Located at</b> <a href="source-class-Tev.Field.Model.FlexibleContentField.html#6-48" title="Go to source code">Tev/Field/Model/FlexibleContentField.php</a><br>
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="current" id="_current">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Tev.Field.Util.FieldGroup.html">Tev\Field\Util\FieldGroup</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_current">#</a>
+			<code><a href="source-class-Tev.Field.Model.FlexibleContentField.html#14-32" title="Go to source code">current</a>( )</code>
+
+			<div class="description short">
+				<p>Get the current flexible content item.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get the current flexible content item.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-Tev.Field.Util.FieldGroup.html">Tev\Field\Util\FieldGroup</a></code></code>
+					</div>
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-Tev.Field.Model.RepeaterField.html#_current">Tev\Field\Model\RepeaterField::current</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Methods inherited from <a href="class-Tev.Field.Model.RepeaterField.html#methods">Tev\Field\Model\RepeaterField</a></h3>
+		<p class="elementList">
+			<code><a href="class-Tev.Field.Model.RepeaterField.html#___construct">__construct()</a></code>, 
+			<code><a href="class-Tev.Field.Model.RepeaterField.html#_count">count()</a></code>, 
+			<code><a href="class-Tev.Field.Model.RepeaterField.html#_getValue">getValue()</a></code>, 
+			<code><a href="class-Tev.Field.Model.RepeaterField.html#_key">key()</a></code>, 
+			<code><a href="class-Tev.Field.Model.RepeaterField.html#_next">next()</a></code>, 
+			<code><a href="class-Tev.Field.Model.RepeaterField.html#_offsetExists">offsetExists()</a></code>, 
+			<code><a href="class-Tev.Field.Model.RepeaterField.html#_offsetGet">offsetGet()</a></code>, 
+			<code><a href="class-Tev.Field.Model.RepeaterField.html#_offsetSet">offsetSet()</a></code>, 
+			<code><a href="class-Tev.Field.Model.RepeaterField.html#_offsetUnset">offsetUnset()</a></code>, 
+			<code><a href="class-Tev.Field.Model.RepeaterField.html#_rewind">rewind()</a></code>, 
+			<code><a href="class-Tev.Field.Model.RepeaterField.html#_valid">valid()</a></code>
+		</p>
+		<h3>Methods inherited from <a href="class-Tev.Field.Model.AbstractField.html#methods">Tev\Field\Model\AbstractField</a></h3>
+		<p class="elementList">
+			<code><a href="class-Tev.Field.Model.AbstractField.html#___toString">__toString()</a></code>, 
+			<code><a href="class-Tev.Field.Model.AbstractField.html#_getBaseObject">getBaseObject()</a></code>, 
+			<code><a href="class-Tev.Field.Model.AbstractField.html#_getKey">getKey()</a></code>, 
+			<code><a href="class-Tev.Field.Model.AbstractField.html#_getName">getName()</a></code>, 
+			<code><a href="class-Tev.Field.Model.AbstractField.html#_val">val()</a></code>
+		</p>
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+		<h2>Properties summary</h2>
+
+		<h3>Properties inherited from <a href="class-Tev.Field.Model.RepeaterField.html#properties">Tev\Field\Model\RepeaterField</a></h3>
+		<p class="elementList">
+			<code><a href="class-Tev.Field.Model.RepeaterField.html#$fieldFactory"><var>$fieldFactory</var></a></code>, 
+			<code><a href="class-Tev.Field.Model.RepeaterField.html#$position"><var>$position</var></a></code>
+		</p>
+		<h3>Properties inherited from <a href="class-Tev.Field.Model.AbstractField.html#properties">Tev\Field\Model\AbstractField</a></h3>
+		<p class="elementList">
+			<code><a href="class-Tev.Field.Model.AbstractField.html#$base"><var>$base</var></a></code>
+		</p>
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Tev core Wordpress library API API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js?371644040"></script>
+<script src="elementlist.js?2676970085"></script>
+</body>
+</html>

@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Tev\Plugin\Loader | Tev core Wordpress library API</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?260161822">
+	<link rel="stylesheet" href="resources/style.css?2291698064">
+
+</head>
+
+<body>
+	<div id="navigation" class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a href="index.html" class="brand">Tev core Wordpress library API</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li>
+							<a href="namespace-Tev.Plugin.html" title="Summary of Tev\Plugin"><span>Namespace</span></a>
+						</li>
+						<li class="active">
+<span>Class</span>						</li>
+
+						<li class="divider-vertical"></li>
+
+						<li>
+							<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+						</li>
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="">
+			<input type="hidden" name="ie" value="UTF-8">
+			<input type="text" name="q" class="search-query" placeholder="Search">
+		</form>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active main"><a href="namespace-Tev.html">Tev<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Application.html">Application<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Application.Bootstrap.html">Bootstrap</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Author.html">Author<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Author.Model.html">Model</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Contracts.html">Contracts</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Field.html">Field<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Field.Model.html">Model</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Field.Util.html">Util</a>
+						</li>
+							</ul></li>
+				<li class="active main"><a href="namespace-Tev.Plugin.html">Plugin<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Plugin.Action.html">Action</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Plugin.Shortcode.html">Shortcode</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Post.html">Post<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Post.Model.html">Model</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Post.Repository.html">Repository</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Taxonomy.html">Taxonomy<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Taxonomy.Model.html">Model</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Taxonomy.Repository.html">Repository</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Term.html">Term<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Term.Model.html">Model</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Term.Repository.html">Repository</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Util.html">Util</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.View.html">View<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.View.Exception.html">Exception</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Tev.Plugin.Loader.html">Loader</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class Loader</h1>
+
+
+	<div class="description">
+	<p>Simple plugin loading utility.</p>
+
+<p>Provides framework for loading plugin content by convention, as follows:</p>
+
+<ul>
+<li><p>Custom post types are loaded from an array, defined in <code>config/post_types.php</code> in the plugin's directory. The array is a set of key value pairs, where the key is the post type identifier and the value is the config to pass to <code>register_post_type</code></p></li>
+<li><p>Custom field groups are loaded from an array, in <code>config/field_groups.php</code> in the plugin's directory. The array is a set of arrays, defining each field group config to pass to <code>register_field_group</code></p></li>
+<li><p>ACF JSON config is loaded from a directory, at <code>config/acf-json/</code> in the plugin's directory. See http://www.advancedcustomfields.com/resources/local-json/ for more information on this</p></li>
+<li><p>Action callbacks are loaded from an array, in <code>config/actions.php</code> in the plugin's directory. The array is a set of key-value pairs, of action names to closure or action provider classes</p></li>
+<li><p>Shortcodes are loaded from an array, in <code>config/shortcodes.php</code> in the plugin's directory. The array is a set of key value pairs, where the key is the shortcode name and the value is the config to pass to <code>add_shortcode</code></p></li>
+</ul>
+
+<p>Usage:</p>
+
+<pre><span class="php-comment">// Add the following to your plugin's config file</span>
+
+tev_app()-&gt;fetch(<span class="php-quote">'plugin_loader'</span>)-&gt;load(__DIR__);</pre>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		<b>Namespace:</b> Tev\Plugin<br>
+		
+
+		<b>Located at</b> <a href="source-class-Tev.Plugin.Loader.html#8-302" title="Go to source code">Tev/Plugin/Loader.php</a><br>
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				voi
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-Tev.Plugin.Loader.html#67-78" title="Go to source code">__construct</a>( <span><code><a href="class-Tev.Application.Application.html">Tev\Application\Application</a></code> <var>$app</var></span> )</code>
+
+			<div class="description short">
+				<p>Constructor.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Constructor.</p>
+
+<p>Inject dependencies.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$app</var></dt>
+						<dd>Application
+</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>voi</code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="load" id="_load">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Tev.Plugin.Loader.html">Tev\Plugin\Loader</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_load">#</a>
+			<code><a href="source-class-Tev.Plugin.Loader.html#80-99" title="Go to source code">load</a>( <span>string <var>$basePath</var></span> )</code>
+
+			<div class="description short">
+				<p>Load all plugin configuration.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Load all plugin configuration.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$basePath</var></dt>
+						<dd>Plugin path
+</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-Tev.Plugin.Loader.html">Tev\Plugin\Loader</a></code></code><br>This, for chaining
+
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="loadPostTypes" id="_loadPostTypes">
+
+			<td class="attributes"><code>
+				 protected 
+				<code><a href="class-Tev.Plugin.Loader.html">Tev\Plugin\Loader</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_loadPostTypes">#</a>
+			<code><a href="source-class-Tev.Plugin.Loader.html#101-135" title="Go to source code">loadPostTypes</a>( )</code>
+
+			<div class="description short">
+				<p>Load custom post types from configuration files.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Load custom post types from configuration files.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-Tev.Plugin.Loader.html">Tev\Plugin\Loader</a></code></code><br>This, for chaining
+
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="loadFieldGroups" id="_loadFieldGroups">
+
+			<td class="attributes"><code>
+				 protected 
+				<code><a href="class-Tev.Plugin.Loader.html">Tev\Plugin\Loader</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_loadFieldGroups">#</a>
+			<code><a href="source-class-Tev.Plugin.Loader.html#137-151" title="Go to source code">loadFieldGroups</a>( )</code>
+
+			<div class="description short">
+				<p>Load custom field groups from configuration files.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Load custom field groups from configuration files.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-Tev.Plugin.Loader.html">Tev\Plugin\Loader</a></code></code><br>This, for chaining
+
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="loadActions" id="_loadActions">
+
+			<td class="attributes"><code>
+				 protected 
+				<code><a href="class-Tev.Plugin.Loader.html">Tev\Plugin\Loader</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_loadActions">#</a>
+			<code><a href="source-class-Tev.Plugin.Loader.html#153-181" title="Go to source code">loadActions</a>( )</code>
+
+			<div class="description short">
+				<p>Load actions from configuration providers.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Load actions from configuration providers.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-Tev.Plugin.Loader.html">Tev\Plugin\Loader</a></code></code><br>This, for chaining
+
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="loadAcfJson" id="_loadAcfJson">
+
+			<td class="attributes"><code>
+				 protected 
+				<code><a href="class-Tev.Plugin.Loader.html">Tev\Plugin\Loader</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_loadAcfJson">#</a>
+			<code><a href="source-class-Tev.Plugin.Loader.html#183-200" title="Go to source code">loadAcfJson</a>( )</code>
+
+			<div class="description short">
+				<p>Load ACF JSON config if supplied.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Load ACF JSON config if supplied.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-Tev.Plugin.Loader.html">Tev\Plugin\Loader</a></code></code><br>This, for chaining
+
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="loadShortCodes" id="_loadShortCodes">
+
+			<td class="attributes"><code>
+				 protected 
+				<code><a href="class-Tev.Plugin.Loader.html">Tev\Plugin\Loader</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_loadShortCodes">#</a>
+			<code><a href="source-class-Tev.Plugin.Loader.html#202-227" title="Go to source code">loadShortCodes</a>( )</code>
+
+			<div class="description short">
+				<p>Load shortcodes from configuration files.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Load shortcodes from configuration files.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-Tev.Plugin.Loader.html">Tev\Plugin\Loader</a></code></code><br>This, for chaining
+
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="loadOptionScreens" id="_loadOptionScreens">
+
+			<td class="attributes"><code>
+				 protected 
+				<code><a href="class-Tev.Plugin.Loader.html">Tev\Plugin\Loader</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_loadOptionScreens">#</a>
+			<code><a href="source-class-Tev.Plugin.Loader.html#229-243" title="Go to source code">loadOptionScreens</a>( )</code>
+
+			<div class="description short">
+				<p>Load custom option screens from configuration files.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Load custom option screens from configuration files.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-Tev.Plugin.Loader.html">Tev\Plugin\Loader</a></code></code><br>This, for chaining
+
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getConfigPath" id="_getConfigPath">
+
+			<td class="attributes"><code>
+				 protected 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getConfigPath">#</a>
+			<code><a href="source-class-Tev.Plugin.Loader.html#245-253" title="Go to source code">getConfigPath</a>( )</code>
+
+			<div class="description short">
+				<p>Get the path to the config directory.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get the path to the config directory.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getSrcPath" id="_getSrcPath">
+
+			<td class="attributes"><code>
+				 protected 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getSrcPath">#</a>
+			<code><a href="source-class-Tev.Plugin.Loader.html#255-263" title="Go to source code">getSrcPath</a>( )</code>
+
+			<div class="description short">
+				<p>Get the path to the config directory.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get the path to the config directory.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getViewsPath" id="_getViewsPath">
+
+			<td class="attributes"><code>
+				 protected 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getViewsPath">#</a>
+			<code><a href="source-class-Tev.Plugin.Loader.html#265-273" title="Go to source code">getViewsPath</a>( )</code>
+
+			<div class="description short">
+				<p>Get the path to the config directory.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get the path to the config directory.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getPluginFile" id="_getPluginFile">
+
+			<td class="attributes"><code>
+				 protected 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getPluginFile">#</a>
+			<code><a href="source-class-Tev.Plugin.Loader.html#275-283" title="Go to source code">getPluginFile</a>( )</code>
+
+			<div class="description short">
+				<p>Get the full path and filename of the plugin's registration file.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get the full path and filename of the plugin's registration file.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="loadConfigFile" id="_loadConfigFile">
+
+			<td class="attributes"><code>
+				 protected 
+				array|null
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_loadConfigFile">#</a>
+			<code><a href="source-class-Tev.Plugin.Loader.html#285-301" title="Go to source code">loadConfigFile</a>( <span>string <var>$file</var></span> )</code>
+
+			<div class="description short">
+				<p>Load a config file from the config directory.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Load a config file from the config directory.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$file</var></dt>
+						<dd>Filename
+</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array|null</code><br>Array config or null if not found
+
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+		<h2>Properties summary</h2>
+		<table class="summary table table-bordered table-striped properties" id="properties">
+		<tr data-order="app" id="$app">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-Tev.Application.Application.html">Tev\Application\Application</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Tev.Plugin.Loader.html#46-51" title="Go to source code"><var>$app</var></a>
+
+				<div class="description short">
+					<p>Application.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					<p>Application.</p>
+
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$app" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="basePath" id="$basePath">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Tev.Plugin.Loader.html#53-58" title="Go to source code"><var>$basePath</var></a>
+
+				<div class="description short">
+					<p>Plugin base path.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					<p>Plugin base path.</p>
+
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$basePath" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="renderer" id="$renderer">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-Tev.View.Renderer.html">Tev\View\Renderer</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Tev.Plugin.Loader.html#60-65" title="Go to source code"><var>$renderer</var></a>
+
+				<div class="description short">
+					<p>View renderer.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					<p>View renderer.</p>
+
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$renderer" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		</table>
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Tev core Wordpress library API API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js?371644040"></script>
+<script src="elementlist.js?2676970085"></script>
+</body>
+</html>

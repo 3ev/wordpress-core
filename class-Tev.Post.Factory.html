@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Tev\Post\Factory | Tev core Wordpress library API</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?260161822">
+	<link rel="stylesheet" href="resources/style.css?2291698064">
+
+</head>
+
+<body>
+	<div id="navigation" class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a href="index.html" class="brand">Tev core Wordpress library API</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li>
+							<a href="namespace-Tev.Post.html" title="Summary of Tev\Post"><span>Namespace</span></a>
+						</li>
+						<li class="active">
+<span>Class</span>						</li>
+
+						<li class="divider-vertical"></li>
+
+						<li>
+							<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+						</li>
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="">
+			<input type="hidden" name="ie" value="UTF-8">
+			<input type="text" name="q" class="search-query" placeholder="Search">
+		</form>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active main"><a href="namespace-Tev.html">Tev<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Application.html">Application<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Application.Bootstrap.html">Bootstrap</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Author.html">Author<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Author.Model.html">Model</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Contracts.html">Contracts</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Field.html">Field<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Field.Model.html">Model</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Field.Util.html">Util</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Plugin.html">Plugin<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Plugin.Action.html">Action</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Plugin.Shortcode.html">Shortcode</a>
+						</li>
+							</ul></li>
+				<li class="active main"><a href="namespace-Tev.Post.html">Post<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Post.Model.html">Model</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Post.Repository.html">Repository</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Taxonomy.html">Taxonomy<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Taxonomy.Model.html">Model</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Taxonomy.Repository.html">Repository</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Term.html">Term<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Term.Model.html">Model</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Term.Repository.html">Repository</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Util.html">Util</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.View.html">View<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.View.Exception.html">Exception</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Tev.Post.Factory.html">Factory</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class Factory</h1>
+
+
+	<div class="description">
+	<p>Post entity factory.</p>
+
+<p>Allows for easy instantiation of post entity objects. Classes can be
+instantiated based on their post type. 'post' and 'page' are registered
+by default.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		<b>Namespace:</b> Tev\Post<br>
+		
+
+		<b>Located at</b> <a href="source-class-Tev.Post.Factory.html#11-157" title="Go to source code">Tev/Post/Factory.php</a><br>
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-Tev.Post.Factory.html#48-66" title="Go to source code">__construct</a>( <span><code><a href="class-Tev.Author.Factory.html">Tev\Author\Factory</a></code> <var>$authorFactory</var></span>, <span><code><a href="class-Tev.Taxonomy.Factory.html">Tev\Taxonomy\Factory</a></code> <var>$taxonomyFactory</var></span>, <span><code><a href="class-Tev.Field.Factory.html">Tev\Field\Factory</a></code> <var>$fieldFactory</var></span> )</code>
+
+			<div class="description short">
+				<p>Constructor.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Constructor.</p>
+
+<p>Inject dependencies.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$authorFactory</var></dt>
+						<dd>Author object factory
+</dd>
+						<dt><var>$taxonomyFactory</var></dt>
+						<dd>Taxonomy entity factory
+</dd>
+						<dt><var>$fieldFactory</var></dt>
+						<dd>Field entity factory
+</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="register" id="_register">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Tev.Post.Factory.html">Tev\Post\Factory</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_register">#</a>
+			<code><a href="source-class-Tev.Post.Factory.html#68-87" title="Go to source code">register</a>( <span>string <var>$postType</var></span>, <span>string <var>$className</var></span> )</code>
+
+			<div class="description short">
+				<p>Register a new post type to class name mapping.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Register a new post type to class name mapping.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$postType</var></dt>
+						<dd>Post type identifier
+</dd>
+						<dt><var>$className</var></dt>
+						<dd>&lt;p&gt;Class name to instantiate for $postType. Class
+                                     must inherit from &lt;code&gt;\Tev\Post\Model\AbstractPost&lt;/code&gt;&lt;/p&gt;
+</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-Tev.Post.Factory.html">Tev\Post\Factory</a></code></code><br>This, for chaining
+
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						Exception<br>IF class name does not inherit from <code>\Tev\Post\Model\AbstractPost</code>
+
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="registered" id="_registered">
+
+			<td class="attributes"><code>
+				 public 
+				string|null
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_registered">#</a>
+			<code><a href="source-class-Tev.Post.Factory.html#89-102" title="Go to source code">registered</a>( <span>string <var>$postType</var></span> )</code>
+
+			<div class="description short">
+				<p>Get the registered class name for the given post type.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get the registered class name for the given post type.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$postType</var></dt>
+						<dd>Post type identifier
+</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string|null</code><br>Class name or null if no registration
+
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="create" id="_create">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Tev.Post.Model.AbstractPost.html">Tev\Post\Model\AbstractPost</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_create">#</a>
+			<code><a href="source-class-Tev.Post.Factory.html#104-136" title="Go to source code">create</a>( <span>WP_Post <var>$base</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$className</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				<p>Instantiate a post entity from a given post object.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Instantiate a post entity from a given post object.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$base</var></dt>
+						<dd>&lt;p&gt;Optional. Base post object. If not
+                                                supplied will attempt to get the current
+                                                post from The Loop&lt;/p&gt;
+</dd>
+						<dt><var>$className</var></dt>
+						<dd>&lt;p&gt;Optional. Class name to instantiate. Will
+                                                use registered default if not supplied&lt;/p&gt;
+</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-Tev.Post.Model.AbstractPost.html">Tev\Post\Model\AbstractPost</a></code></code><br>Post entity
+
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						Exception<br>If $base is not given and not in the The Loop
+
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="current" id="_current">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-Tev.Post.Model.AbstractPost.html">Tev\Post\Model\AbstractPost</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_current">#</a>
+			<code><a href="source-class-Tev.Post.Factory.html#138-156" title="Go to source code">current</a>( <span>string <var>$className</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				<p>Instantiate a post entity from the current post object.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Instantiate a post entity from the current post object.</p>
+
+<p>Only works within The Loop.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$className</var></dt>
+						<dd>&lt;p&gt;Optional. Class name to instantiate. Will
+                                                use registered default if not supplied&lt;/p&gt;
+</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-Tev.Post.Model.AbstractPost.html">Tev\Post\Model\AbstractPost</a></code></code><br>Post entity
+
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						Exception<br>If not in the The Loop
+
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Tev core Wordpress library API API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js?371644040"></script>
+<script src="elementlist.js?2676970085"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex">
+
+	<title>File Tev/View/Exception/NotFoundException.php | Tev core Wordpress library API</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?260161822">
+	<link rel="stylesheet" href="resources/style.css?2291698064">
+
+</head>
+
+<body>
+	<div id="navigation" class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a href="index.html" class="brand">Tev core Wordpress library API</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li>
+							<a href="namespace-Tev.View.Exception.html" title="Summary of Tev\View\Exception"><span>Namespace</span></a>
+						</li>
+						<li>
+							<a href="class-Tev.View.Exception.NotFoundException.html" title="Summary of Tev\View\Exception\NotFoundException"><span>Class</span></a>
+						</li>
+
+						<li class="divider-vertical"></li>
+
+						<li>
+							<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+						</li>
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="">
+			<input type="hidden" name="ie" value="UTF-8">
+			<input type="text" name="q" class="search-query" placeholder="Search">
+		</form>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active main"><a href="namespace-Tev.html">Tev<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Application.html">Application<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Application.Bootstrap.html">Bootstrap</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Author.html">Author<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Author.Model.html">Model</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Contracts.html">Contracts</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Field.html">Field<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Field.Model.html">Model</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Field.Util.html">Util</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Plugin.html">Plugin<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Plugin.Action.html">Action</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Plugin.Shortcode.html">Shortcode</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Post.html">Post<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Post.Model.html">Model</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Post.Repository.html">Repository</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Taxonomy.html">Taxonomy<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Taxonomy.Model.html">Model</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Taxonomy.Repository.html">Repository</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Term.html">Term<span></span></a>
+						<ul>
+				<li class="main"><a href="namespace-Tev.Term.Model.html">Model</a>
+						</li>
+				<li class="main"><a href="namespace-Tev.Term.Repository.html">Repository</a>
+						</li>
+							</ul></li>
+				<li class="main"><a href="namespace-Tev.Util.html">Util</a>
+						</li>
+				<li class="active main"><a href="namespace-Tev.View.html">View<span></span></a>
+						<ul>
+				<li class="active main"><a href="namespace-Tev.View.Exception.html">Exception</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li class="active"><a href="class-Tev.View.Exception.NotFoundException.html">NotFoundException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<pre id="source"><code><span id="1" class="l"><a class="l" href="#1"> 1 </a><span class="xlang">&lt;?php</span>
+</span><span id="2" class="l"><a class="l" href="#2"> 2 </a><span class="php-keyword1">namespace</span> Tev\View\Exception;
+</span><span id="3" class="l"><a class="l" href="#3"> 3 </a>
+</span><span id="4" class="l"><a class="l" href="#4"> 4 </a><span class="php-keyword1">use</span> Exception;
+</span><span id="5" class="l"><a class="l" href="#5"> 5 </a>
+</span><span id="6" class="l"><a class="l" href="#6"> 6 </a><span class="php-comment">/**
+</span></span><span id="7" class="l"><a class="l" href="#7"> 7 </a><span class="php-comment"> * This exception will be thrown when a view does not exist.
+</span></span><span id="8" class="l"><a class="l" href="#8"> 8 </a><span class="php-comment"> */</span>
+</span><span id="9" class="l"><a class="l" href="#9"> 9 </a><span class="php-keyword1">class</span> <a id="NotFoundException" href="#NotFoundException">NotFoundException</a> <span class="php-keyword1">extends</span> Exception {}
+</span><span id="10" class="l"><a class="l" href="#10">10 </a></span></code></pre>
+	</div>
+
+	<div id="footer">
+		Tev core Wordpress library API API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js?371644040"></script>
+<script src="elementlist.js?2676970085"></script>
+</body>
+</html>
