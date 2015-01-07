@@ -46,7 +46,7 @@ if (!function_exists('tev_partial')) {
 if (!function_exists('tev_post_factory_register')) {
 
     /**
-     * @see \Tev\Post\Factory::register()
+     * @see \Tev\Post\Factory
      */
     function tev_post_factory_register($postType, $className) {
         Tev\Application\Application::getInstance()
@@ -59,7 +59,7 @@ if (!function_exists('tev_post_factory_register')) {
 if (!function_exists('tev_post_factory')) {
 
     /**
-     * @see \Tev\Post\Factory::create()
+     * @see \Tev\Post\Factory
      */
     function tev_post_factory($base = null, $className = null) {
         return Tev\Application\Application::getInstance()
