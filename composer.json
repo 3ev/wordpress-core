@@ -33,7 +33,7 @@
     },
 
     "require-dev": {
-        "apigen/apigen": "~4.0.0-RC3"
+        "apigen/apigen": "~4.0"
     },
 
     "autoload": {
