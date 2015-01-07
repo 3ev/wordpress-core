@@ -1,0 +1,19 @@
+{
+  "name": "3ev-wordpress-core",
+  "version": "0.0.1",
+  "description": "Utility belt for improving the way you build Wordpress plugins and themes",
+  "author": {
+    "name": "3ev",
+    "email": "dev@3ev.com",
+    "url": "http://www.3ev.com"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-apigen": "^0.1.3"
+  }
+}
