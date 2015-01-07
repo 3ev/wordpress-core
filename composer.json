@@ -1,0 +1,51 @@
+{
+    "name": "3ev/wordpress-core",
+
+    "type": "library",
+
+    "description": "Utility belt for improving the way you build Wordpress plugins and themes",
+
+    "keywords": ["modern", "wordpress", "framework"],
+
+    "homepage": "https://github.com/3ev/wordpress-core",
+
+    "license": "MIT",
+
+    "authors": [
+        {
+            "name": "3ev",
+            "homepage": "http://www.3ev.com/",
+            "role": "Developer"
+        },
+
+        {
+            "name": "Ben Constable",
+            "email": "benconstable@3ev.com",
+            "homepage": "http://github.com/BenConstable",
+            "role": "Developer"
+        }
+    ],
+
+    "require": {
+        "php": ">= 5.3.2",
+        "pimple/pimple": "~3.0",
+        "nesbot/carbon": "~1.13"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Tev\\": "src/Tev/"
+        }
+    },
+
+    "config": {
+        "preferred-install": "dist",
+        "bin-dir": "bin"
+    },
+
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    }
+}
