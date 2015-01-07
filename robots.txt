@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: http://3ev.github.io/wordpress-core/sitemap.xml

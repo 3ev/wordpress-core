@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+	<loc>http://3ev.github.io/wordpress-core/index.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/namespace-Tev.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/namespace-Tev.Application.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/namespace-Tev.Application.Bootstrap.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/namespace-Tev.Author.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/namespace-Tev.Author.Model.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/namespace-Tev.Contracts.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/namespace-Tev.Field.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/namespace-Tev.Field.Model.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/namespace-Tev.Field.Util.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/namespace-Tev.Plugin.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/namespace-Tev.Plugin.Action.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/namespace-Tev.Plugin.Shortcode.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/namespace-Tev.Post.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/namespace-Tev.Post.Model.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/namespace-Tev.Post.Repository.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/namespace-Tev.Taxonomy.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/namespace-Tev.Taxonomy.Model.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/namespace-Tev.Taxonomy.Repository.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/namespace-Tev.Term.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/namespace-Tev.Term.Model.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/namespace-Tev.Term.Repository.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/namespace-Tev.Util.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/namespace-Tev.View.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/namespace-Tev.View.Exception.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/namespace-None.html</loc>
+</url>
+
+
+<url>
+	<loc>http://3ev.github.io/wordpress-core/function-tev_app.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/function-tev_fetch.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/function-tev_partial.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/function-tev_post_factory.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/function-tev_post_factory_register.html</loc>
+</url>
+</urlset>

@@ -215,7 +215,7 @@ pre code {
 	overflow: auto;
 	margin-left: 275px;
 	height: 100%;
-	position: fixed;
+	position: relative;
 	left: 0;
 	right: 0;
 }
@@ -282,6 +282,10 @@ h2.switchable {
 	text-align: right;
 }
 
+.summary td hr {
+	margin: 8px -8px;
+}
+
 #packages.summary td:first-child, #namespaces.summary td:first-child, .inherited.summary td:first-child, .used.summary td:first-child {
 	text-align: left;
 }
@@ -322,7 +326,7 @@ h2.switchable {
 	white-space: pre-wrap;
 }
 
-td.attributes {
+td.name, td.attributes {
 	width: 1%;
 }
 

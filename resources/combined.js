@@ -1,6 +1,6 @@
 
 var ApiGen = ApiGen || {};
-ApiGen.config = {"resources":{"resources":"resources"},"templates":{"common":{"overview.latte":"index.html","combined.js.latte":"resources\/combined.js","elementlist.js.latte":"elementlist.js","404.latte":"404.html"},"main":{"package":{"filename":"package-%s.html","template":"package.latte"},"namespace":{"filename":"namespace-%s.html","template":"namespace.latte"},"class":{"filename":"class-%s.html","template":"class.latte"},"constant":{"filename":"constant-%s.html","template":"constant.latte"},"function":{"filename":"function-%s.html","template":"function.latte"},"source":{"filename":"source-%s.html","template":"source.latte"},"tree":{"filename":"tree.html","template":"tree.latte"},"deprecated":{"filename":"deprecated.html","template":"deprecated.latte"},"todo":{"filename":"todo.html","template":"todo.latte"}},"optional":{"sitemap":{"filename":"sitemap.xml","template":"sitemap.xml.latte"},"opensearch":{"filename":"opensearch.xml","template":"opensearch.xml.latte"},"robots":{"filename":"robots.txt","template":"robots.txt.latte"}}},"options":{"elementDetailsCollapsed":true,"elementsOrder":"natural"}};
+ApiGen.config = {"options":{"elementDetailsCollapsed":true,"elementsOrder":"natural"},"name":"Twitter Bootstrap theme","templatesPath":"\/Users\/Ben\/Code\/PHP\/wordpress-core\/vendor\/apigen\/apigen\/src\/templates\/bootstrap","resources":{"\/Users\/Ben\/Code\/PHP\/wordpress-core\/vendor\/apigen\/apigen\/src\/templates\/bootstrap\/resources":"resources"},"templates":{"overview":{"filename":"index.html","template":"\/Users\/Ben\/Code\/PHP\/wordpress-core\/vendor\/apigen\/apigen\/src\/templates\/bootstrap\/overview.latte"},"combined":{"filename":"resources\/combined.js","template":"\/Users\/Ben\/Code\/PHP\/wordpress-core\/vendor\/apigen\/apigen\/src\/templates\/bootstrap\/combined.js.latte"},"elementlist":{"filename":"elementlist.js","template":"\/Users\/Ben\/Code\/PHP\/wordpress-core\/vendor\/apigen\/apigen\/src\/templates\/bootstrap\/elementlist.js.latte"},"404":{"filename":"404.html","template":"\/Users\/Ben\/Code\/PHP\/wordpress-core\/vendor\/apigen\/apigen\/src\/templates\/bootstrap\/404.latte"},"package":{"filename":"package-%s.html","template":"\/Users\/Ben\/Code\/PHP\/wordpress-core\/vendor\/apigen\/apigen\/src\/templates\/bootstrap\/package.latte"},"namespace":{"filename":"namespace-%s.html","template":"\/Users\/Ben\/Code\/PHP\/wordpress-core\/vendor\/apigen\/apigen\/src\/templates\/bootstrap\/namespace.latte"},"class":{"filename":"class-%s.html","template":"\/Users\/Ben\/Code\/PHP\/wordpress-core\/vendor\/apigen\/apigen\/src\/templates\/bootstrap\/class.latte"},"constant":{"filename":"constant-%s.html","template":"\/Users\/Ben\/Code\/PHP\/wordpress-core\/vendor\/apigen\/apigen\/src\/templates\/bootstrap\/constant.latte"},"function":{"filename":"function-%s.html","template":"\/Users\/Ben\/Code\/PHP\/wordpress-core\/vendor\/apigen\/apigen\/src\/templates\/bootstrap\/function.latte"},"source":{"filename":"source-%s.html","template":"\/Users\/Ben\/Code\/PHP\/wordpress-core\/vendor\/apigen\/apigen\/src\/templates\/bootstrap\/source.latte"},"tree":{"filename":"tree.html","template":"\/Users\/Ben\/Code\/PHP\/wordpress-core\/vendor\/apigen\/apigen\/src\/templates\/bootstrap\/tree.latte"},"deprecated":{"filename":"deprecated.html","template":"\/Users\/Ben\/Code\/PHP\/wordpress-core\/vendor\/apigen\/apigen\/src\/templates\/bootstrap\/deprecated.latte"},"todo":{"filename":"todo.html","template":"\/Users\/Ben\/Code\/PHP\/wordpress-core\/vendor\/apigen\/apigen\/src\/templates\/bootstrap\/todo.latte"},"sitemap":{"filename":"sitemap.xml","template":"\/Users\/Ben\/Code\/PHP\/wordpress-core\/vendor\/apigen\/apigen\/src\/templates\/bootstrap\/sitemap.xml.latte"},"opensearch":{"filename":"opensearch.xml","template":"\/Users\/Ben\/Code\/PHP\/wordpress-core\/vendor\/apigen\/apigen\/src\/templates\/bootstrap\/opensearch.xml.latte"},"robots":{"filename":"robots.txt","template":"\/Users\/Ben\/Code\/PHP\/wordpress-core\/vendor\/apigen\/apigen\/src\/templates\/bootstrap\/robots.txt.latte"}}};
 
 
 	/*! jQuery v1.10.2 | (c) 2005, 2013 jQuery Foundation, Inc. | jquery.org/license
@@ -295,7 +295,6 @@ $.Autocompleter = function(input, options) {
   		}
 		}
 	}).bind("search", function() {
-		// TODO why not just specifying both arguments?
 		var fn = (arguments.length > 1) ? arguments[1] : null;
 		function findValueCallback(q, data) {
 			var result;
@@ -350,7 +349,6 @@ $.Autocompleter = function(input, options) {
 					progress += seperator;
 				});
 				words[wordAt] = v;
-				// TODO this should set the cursor to the right position, but it gets overriden somewhere
 				//$.Autocompleter.Selection(input, progress + seperator, progress + seperator);
 				v = words.join( options.multipleSeparator );
 			}
@@ -1101,7 +1099,7 @@ jQuery.fn.sortElements = (function(){
 			var location = window.location.href.split('/');
 			location.pop();
 			var parts = data[1].split(/::|$/);
-			var file = $.sprintf(ApiGen.config.templates.main[autocompleteFiles[data[0]]].filename, parts[0].replace(/\(\)/, '').replace(/[^\w]/g, '.'));
+			var file = $.sprintf(ApiGen.config.templates[autocompleteFiles[data[0]]].filename, parts[0].replace(/\(\)/, '').replace(/[^\w]/g, '.'));
 			if (parts[1]) {
 				file += '#' + ('mm' === data[0] || 'mp' === data[0] ? 'm' : '') + parts[1].replace(/([\w]+)\(\)/, '_$1');
 			}
@@ -1258,7 +1256,7 @@ jQuery.fn.sortElements = (function(){
 
 	// Save selected lines
 	var lastLine;
-	$('a.l').click(function(event) {
+	$('.l a').click(function(event) {
 		event.preventDefault();
 
 		var $selectedLine = $(this).parent();
