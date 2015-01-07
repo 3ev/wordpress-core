@@ -1,0 +1,17 @@
+destination: docs
+source:
+    - src
+
+charset:
+    - UTF-8
+
+main: Tev
+title: 3ev Core Wordpress library API
+templateTheme: bootstrap
+autocomplete:
+    - classes
+    - methods
+    - functions
+    - classconstants
+
+php: false
