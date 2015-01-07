@@ -39,7 +39,11 @@
     "autoload": {
         "psr-4": {
             "Tev\\": "src/Tev/"
-        }
+        },
+
+        "files": [
+            "src/helpers.php"
+        ]
     },
 
     "config": {
