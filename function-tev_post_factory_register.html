@@ -191,14 +191,15 @@
 	<h1>Function tev_post_factory_register</h1>
 
 
+	<div class="description">
+	<p>Register a new post type to class name mapping.</p>
+	</div>
 
 	<div class="alert alert-info">
 		
 		
-				<b>See:</b>
-				<code><a href="class-Tev.Post.Factory.html">Tev\Post\Factory</a></code><br>
 		<b>Located at</b>
-		<a href="source-function-tev_post_factory_register.html#48-55" title="Go to source code">
+		<a href="source-function-tev_post_factory_register.html#48-62" title="Go to source code">
 			helpers.php
 		</a><br>
 	</div>
@@ -207,18 +208,30 @@
 	<h2>Parameters summary</h2>
 	<table class="summary table table-bordered table-striped" id="parameters">
 	<tr id="$postType">
-		<td class="name"><code></code></td>
+		<td class="name"><code>string</code></td>
 		<td class="value"><code><var>$postType</var></code></td>
-		<td></td>
+		<td>Post type identifier</td>
 	</tr>
 	<tr id="$className">
-		<td class="name"><code></code></td>
+		<td class="name"><code>string</code></td>
 		<td class="value"><code><var>$className</var></code></td>
-		<td></td>
+		<td>&lt;p&gt;Class name to instantiate for $postType. Class
+                          must inherit from &lt;code&gt;\Tev\Post\Model\AbstractPost&lt;/code&gt;&lt;/p&gt;</td>
 	</tr>
 	</table>
 
 
+	<h2>Thrown exceptions summary</h2>
+	<table class="summary table table-bordered table-striped" id="throws">
+	<tr>
+		<td class="name"><code>
+			Exception
+		</code></td>
+		<td>
+			If class name does not inherit from <code>\Tev\Post\Model\AbstractPost</code>
+		</td>
+	</tr>
+	</table>
 
 </div>
 	</div>

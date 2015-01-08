@@ -237,9 +237,9 @@
 </span></span><span id="47" class="l"><a href="#47"> 47 </a><span class="php-comment">     *
 </span></span><span id="48" class="l"><a href="#48"> 48 </a><span class="php-comment">     * Inject dependencies.
 </span></span><span id="49" class="l"><a href="#49"> 49 </a><span class="php-comment">     *
-</span></span><span id="50" class="l"><a href="#50"> 50 </a><span class="php-comment">     * @param  \stdClass                     $base        Base term oject
+</span></span><span id="50" class="l"><a href="#50"> 50 </a><span class="php-comment">     * @param  \stdClass                    $base        Base term oject
 </span></span><span id="51" class="l"><a href="#51"> 51 </a><span class="php-comment">     * @param  \Tev\Taxonomy\Model\Taxonomy $taxonomy    Term taxonomy
-</span></span><span id="52" class="l"><a href="#52"> 52 </a><span class="php-comment">     * @param  \Tev\Term\Factory             $termFactory Term factory
+</span></span><span id="52" class="l"><a href="#52"> 52 </a><span class="php-comment">     * @param  \Tev\Term\Factory            $termFactory Term factory
 </span></span><span id="53" class="l"><a href="#53"> 53 </a><span class="php-comment">     * @return void
 </span></span><span id="54" class="l"><a href="#54"> 54 </a><span class="php-comment">     */</span>
 </span><span id="55" class="l"><a href="#55"> 55 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> __construct(stdClass <span class="php-var">$base</span>,
@@ -350,7 +350,7 @@
 </span><span id="160" class="l"><a href="#160">160 </a>    <span class="php-comment">/**
 </span></span><span id="161" class="l"><a href="#161">161 </a><span class="php-comment">     * Return array of direct child terms of this term.
 </span></span><span id="162" class="l"><a href="#162">162 </a><span class="php-comment">     *
-</span></span><span id="163" class="l"><a href="#163">163 </a><span class="php-comment">     * @return array[\Tev\Term\Model\Term]
+</span></span><span id="163" class="l"><a href="#163">163 </a><span class="php-comment">     * @return \Tev\Term\Model\Term[]
 </span></span><span id="164" class="l"><a href="#164">164 </a><span class="php-comment">     */</span>
 </span><span id="165" class="l"><a href="#165">165 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getChildren()
 </span><span id="166" class="l"><a href="#166">166 </a>    {

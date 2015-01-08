@@ -191,14 +191,15 @@
 	<h1>Function tev_post_factory</h1>
 
 
+	<div class="description">
+	<p>Instantiate a post entity from a given post object.</p>
+	</div>
 
 	<div class="alert alert-info">
 		
 		
-				<b>See:</b>
-				<code><a href="class-Tev.Post.Factory.html">Tev\Post\Factory</a></code><br>
 		<b>Located at</b>
-		<a href="source-function-tev_post_factory.html#61-68" title="Go to source code">
+		<a href="source-function-tev_post_factory.html#68-84" title="Go to source code">
 			helpers.php
 		</a><br>
 	</div>
@@ -207,18 +208,43 @@
 	<h2>Parameters summary</h2>
 	<table class="summary table table-bordered table-striped" id="parameters">
 	<tr id="$base">
-		<td class="name"><code></code></td>
+		<td class="name"><code>WP_Post</code></td>
 		<td class="value"><code><var>$base</var> = <span class="php-keyword1">null</span></code></td>
-		<td></td>
+		<td>&lt;p&gt;Optional. Base post object. If not
+                                                supplied will attempt to get the current
+                                                post from The Loop&lt;/p&gt;</td>
 	</tr>
 	<tr id="$className">
-		<td class="name"><code></code></td>
+		<td class="name"><code>string</code></td>
 		<td class="value"><code><var>$className</var> = <span class="php-keyword1">null</span></code></td>
-		<td></td>
+		<td>&lt;p&gt;Optional. Class name to instantiate. Will
+                                                use registered default if not supplied&lt;/p&gt;</td>
 	</tr>
 	</table>
 
+	<h2>Return value summary</h2>
+	<table class="summary table table-bordered table-striped" id="returns">
+	<tr>
+		<td class="name"><code>
+			<code><a href="class-Tev.Post.Model.AbstractPost.html">Tev\Post\Model\AbstractPost</a></code>
+		</code></td>
+		<td>
+			Post entity
+		</td>
+	</tr>
+	</table>
 
+	<h2>Thrown exceptions summary</h2>
+	<table class="summary table table-bordered table-striped" id="throws">
+	<tr>
+		<td class="name"><code>
+			Exception
+		</code></td>
+		<td>
+			If $base is not given and not in the The Loop
+		</td>
+	</tr>
+	</table>
 
 </div>
 	</div>
