@@ -73,7 +73,7 @@ class Factory
      *                                      must inherit from `\Tev\Post\Model\AbstractPost`
      * @return \Tev\Post\Factory            This, for chaining
      *
-     * @throws \Exception IF class name does not inherit from `\Tev\Post\Model\AbstractPost`
+     * @throws \Exception If class name does not inherit from `\Tev\Post\Model\AbstractPost`
      */
     public function register($postType, $className)
     {

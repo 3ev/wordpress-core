@@ -36,7 +36,7 @@ class Factory
     /**
      * Create a new Taxonomy object.
      *
-     * @param  string|stdClass              $taxonomy Taxonomy name or object
+     * @param  string|\stdClass             $taxonomy Taxonomy name or object
      * @return \Tev\Taxonomy\Model\Taxonomy           Created taxonomy
      */
     public function create($taxonomy)

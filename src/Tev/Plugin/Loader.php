@@ -37,7 +37,7 @@ use Tev\Application\Application,
  * ```php
  * // Add the following to your plugin's config file
  *
- * tev_app()->fetch('plugin_loader')->load(__DIR__);
+ * tev_fetch('plugin_loader')->load(__DIR__);
  * ```
  *
  */
@@ -70,7 +70,7 @@ class Loader
      * Inject dependencies.
      *
      * @param  \Tev\Application\Application $app Application
-     * @return voi
+     * @return void
      */
     public function __construct(Application $app)
     {

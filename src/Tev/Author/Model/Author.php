@@ -70,7 +70,7 @@ class Author implements WordpressWrapperInterface
     {
         return $this->base->user_nicename;
     }
-    
+
     /**
      * Get the author display name.
      *
@@ -79,8 +79,8 @@ class Author implements WordpressWrapperInterface
     public function getDisplayName()
     {
         return $this->base->display_name;
-    } 
-    
+    }
+
     /**
      * Get the author email address.
      *

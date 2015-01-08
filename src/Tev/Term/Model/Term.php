@@ -47,9 +47,9 @@ class Term implements WordpressWrapperInterface
      *
      * Inject dependencies.
      *
-     * @param  \stdClass                     $base        Base term oject
+     * @param  \stdClass                    $base        Base term oject
      * @param  \Tev\Taxonomy\Model\Taxonomy $taxonomy    Term taxonomy
-     * @param  \Tev\Term\Factory             $termFactory Term factory
+     * @param  \Tev\Term\Factory            $termFactory Term factory
      * @return void
      */
     public function __construct(stdClass $base,
@@ -160,7 +160,7 @@ class Term implements WordpressWrapperInterface
     /**
      * Return array of direct child terms of this term.
      *
-     * @return array[\Tev\Term\Model\Term]
+     * @return \Tev\Term\Model\Term[]
      */
     public function getChildren()
     {

@@ -24,7 +24,7 @@ class Factory
     /**
      * Registered field type factory functions.
      *
-     * @var array[\Closure]
+     * @var \Closure[]
      */
     private $registry;
 

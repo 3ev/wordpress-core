@@ -122,7 +122,7 @@ class RepeaterField extends AbstractField implements ArrayAccess, Iterator, Coun
     }
 
     /**
-     * Required for \ArrayAccess.
+     * Required for `\ArrayAccess`.
      *
      * @param  mixed   $offset Array offset
      * @return boolean
@@ -133,7 +133,7 @@ class RepeaterField extends AbstractField implements ArrayAccess, Iterator, Coun
     }
 
     /**
-     * Required for \ArrayAccess.
+     * Required for `\ArrayAccess`.
      *
      * @param  mixed $offset Array offset
      * @return mixed
@@ -153,7 +153,7 @@ class RepeaterField extends AbstractField implements ArrayAccess, Iterator, Coun
     }
 
     /**
-     * Required for ArrayAccess.
+     * Required for `\ArrayAccess`.
      *
      * @param  mixed $offset Array offset
      * @param  mixed $value  Value to set
@@ -169,7 +169,7 @@ class RepeaterField extends AbstractField implements ArrayAccess, Iterator, Coun
     }
 
     /**
-     * Required for ArrayAccess.
+     * Required for `\ArrayAccess`.
      *
      * @param  mixed $offset Array offset
      * @return void

@@ -77,7 +77,7 @@ class Taxonomy implements WordpressWrapperInterface
      *
      * @param  boolean                     $topLevel Whether or not to just get top level terms
      * @param  array                       $options  Optional. Same options as passed to `get_terms()`
-     * @return array[\Tev\Term\Model\Term]           Array of terms
+     * @return \Tev\Term\Model\Term[]                Array of terms
      */
     public function getTerms($topLevel = false, $options = array())
     {

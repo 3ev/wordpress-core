@@ -62,7 +62,7 @@ class TermRepository
     /**
      * Convert an array of Wordpress term objects to array of Term objects.
      *
-     * @param  stdClass[]                   $terms    Wordpress term objects
+     * @param  \stdClass[]                  $terms    Wordpress term objects
      * @param  \Tev\Taxonomy\Model\Taxonomy $taxonomy Parent taxonomy
      * @return \Tev\Term\Model\Term[]                 Term objects
      */

@@ -46,7 +46,14 @@ if (!function_exists('tev_partial')) {
 if (!function_exists('tev_post_factory_register')) {
 
     /**
-     * @see \Tev\Post\Factory
+     * Register a new post type to class name mapping.
+     *
+     * @param  string $postType  Post type identifier
+     * @param  string $className Class name to instantiate for $postType. Class
+     *                           must inherit from `\Tev\Post\Model\AbstractPost`
+     * @return void
+     *
+     * @throws \Exception If class name does not inherit from `\Tev\Post\Model\AbstractPost`
      */
     function tev_post_factory_register($postType, $className) {
         Tev\Application\Application::getInstance()
@@ -59,7 +66,16 @@ if (!function_exists('tev_post_factory_register')) {
 if (!function_exists('tev_post_factory')) {
 
     /**
-     * @see \Tev\Post\Factory
+     * Instantiate a post entity from a given post object.
+     *
+     * @param  \WP_Post                     $base      Optional. Base post object. If not
+     *                                                 supplied will attempt to get the current
+     *                                                 post from The Loop
+     * @param  string                       $className Optional. Class name to instantiate. Will
+     *                                                 use registered default if not supplied
+     * @return \Tev\Post\Model\AbstractPost            Post entity
+     *
+     * @throws \Exception If $base is not given and not in the The Loop
      */
     function tev_post_factory($base = null, $className = null) {
         return Tev\Application\Application::getInstance()

@@ -72,7 +72,7 @@ class Application
      * Bind a service into the container.
      *
      * @param  string                       $name Service name
-     * @param  \Closure                     $bind Service location closure. Receives \Tev\Application as argument
+     * @param  \Closure                     $bind Service location closure. Receives \Tev\Application\Application as argument
      * @return \Tev\Application\Application       This, for chaining
      */
     public function bind($name, Closure $bind)

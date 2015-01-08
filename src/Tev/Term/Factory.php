@@ -18,7 +18,7 @@ class Factory
     /**
      * Create a new Term object.
      *
-     * @param  int|stdClass                 $term     Term ID or term object
+     * @param  int|\stdClass                $term     Term ID or term object
      * @param  \Tev\Taxonomy\Model\Taxonomy $taxonomy Term taxonomy
      * @return \Tev\Term\Model\Term                   Term object
      *
