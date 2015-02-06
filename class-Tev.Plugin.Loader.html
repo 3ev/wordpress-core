@@ -198,6 +198,7 @@
 <li><p>ACF JSON config is loaded from a directory, at <code>config/acf-json/</code> in the plugin's directory. See http://www.advancedcustomfields.com/resources/local-json/ for more information on this</p></li>
 <li><p>Action callbacks are loaded from an array, in <code>config/actions.php</code> in the plugin's directory. The array is a set of key-value pairs, of action names to closure or action provider classes</p></li>
 <li><p>Shortcodes are loaded from an array, in <code>config/shortcodes.php</code> in the plugin's directory. The array is a set of key value pairs, where the key is the shortcode name and the value is the config to pass to <code>add_shortcode</code></p></li>
+<li><p>Custom WP CLI commands are loaded from an array, defined in <code>config/commands.php</code> in the plugin's directory. The array is a set of key value pairs, where the key is the command indentifier and the value is the fully-qualified class name</p></li>
 </ul>
 
 <p>Usage:</p>
@@ -221,7 +222,7 @@ tev_fetch(<span class="php-quote">'plugin_loader'</span>)-&gt;load(__DIR__);</pr
 		<b>Namespace:</b> <a href="namespace-Tev.html">Tev</a>\<a href="namespace-Tev.Plugin.html">Plugin</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Tev.Plugin.Loader.html#8-302" title="Go to source code">Tev/Plugin/Loader.php</a>
+			<b>Located at</b> <a href="source-class-Tev.Plugin.Loader.html#8-324" title="Go to source code">Tev/Plugin/Loader.php</a>
 		<br>
 	</div>
 
@@ -240,7 +241,7 @@ tev_fetch(<span class="php-quote">'plugin_loader'</span>)-&gt;load(__DIR__);</pr
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Tev.Plugin.Loader.html#67-78" title="Go to source code">__construct</a>( <span><code><a href="class-Tev.Application.Application.html">Tev\Application\Application</a></code> <var>$app</var></span> )</code>
+			<code><a href="source-class-Tev.Plugin.Loader.html#72-83" title="Go to source code">__construct</a>( <span><code><a href="class-Tev.Application.Application.html">Tev\Application\Application</a></code> <var>$app</var></span> )</code>
 
 			<div class="description short">
 				<p>Constructor.</p>
@@ -276,7 +277,7 @@ tev_fetch(<span class="php-quote">'plugin_loader'</span>)-&gt;load(__DIR__);</pr
 
 			<td class="name"><div>
 			<a class="anchor" href="#_load">#</a>
-			<code><a href="source-class-Tev.Plugin.Loader.html#80-99" title="Go to source code">load</a>( <span>string <var>$basePath</var></span> )</code>
+			<code><a href="source-class-Tev.Plugin.Loader.html#85-105" title="Go to source code">load</a>( <span>string <var>$basePath</var></span> )</code>
 
 			<div class="description short">
 				<p>Load all plugin configuration.</p>
@@ -314,7 +315,7 @@ tev_fetch(<span class="php-quote">'plugin_loader'</span>)-&gt;load(__DIR__);</pr
 
 			<td class="name"><div>
 			<a class="anchor" href="#_loadPostTypes">#</a>
-			<code><a href="source-class-Tev.Plugin.Loader.html#101-135" title="Go to source code">loadPostTypes</a>( )</code>
+			<code><a href="source-class-Tev.Plugin.Loader.html#107-141" title="Go to source code">loadPostTypes</a>( )</code>
 
 			<div class="description short">
 				<p>Load custom post types from configuration files.</p>
@@ -347,7 +348,7 @@ tev_fetch(<span class="php-quote">'plugin_loader'</span>)-&gt;load(__DIR__);</pr
 
 			<td class="name"><div>
 			<a class="anchor" href="#_loadFieldGroups">#</a>
-			<code><a href="source-class-Tev.Plugin.Loader.html#137-151" title="Go to source code">loadFieldGroups</a>( )</code>
+			<code><a href="source-class-Tev.Plugin.Loader.html#143-157" title="Go to source code">loadFieldGroups</a>( )</code>
 
 			<div class="description short">
 				<p>Load custom field groups from configuration files.</p>
@@ -380,7 +381,7 @@ tev_fetch(<span class="php-quote">'plugin_loader'</span>)-&gt;load(__DIR__);</pr
 
 			<td class="name"><div>
 			<a class="anchor" href="#_loadActions">#</a>
-			<code><a href="source-class-Tev.Plugin.Loader.html#153-181" title="Go to source code">loadActions</a>( )</code>
+			<code><a href="source-class-Tev.Plugin.Loader.html#159-187" title="Go to source code">loadActions</a>( )</code>
 
 			<div class="description short">
 				<p>Load actions from configuration providers.</p>
@@ -413,7 +414,7 @@ tev_fetch(<span class="php-quote">'plugin_loader'</span>)-&gt;load(__DIR__);</pr
 
 			<td class="name"><div>
 			<a class="anchor" href="#_loadAcfJson">#</a>
-			<code><a href="source-class-Tev.Plugin.Loader.html#183-200" title="Go to source code">loadAcfJson</a>( )</code>
+			<code><a href="source-class-Tev.Plugin.Loader.html#189-206" title="Go to source code">loadAcfJson</a>( )</code>
 
 			<div class="description short">
 				<p>Load ACF JSON config if supplied.</p>
@@ -446,7 +447,7 @@ tev_fetch(<span class="php-quote">'plugin_loader'</span>)-&gt;load(__DIR__);</pr
 
 			<td class="name"><div>
 			<a class="anchor" href="#_loadShortCodes">#</a>
-			<code><a href="source-class-Tev.Plugin.Loader.html#202-227" title="Go to source code">loadShortCodes</a>( )</code>
+			<code><a href="source-class-Tev.Plugin.Loader.html#208-233" title="Go to source code">loadShortCodes</a>( )</code>
 
 			<div class="description short">
 				<p>Load shortcodes from configuration files.</p>
@@ -479,7 +480,7 @@ tev_fetch(<span class="php-quote">'plugin_loader'</span>)-&gt;load(__DIR__);</pr
 
 			<td class="name"><div>
 			<a class="anchor" href="#_loadOptionScreens">#</a>
-			<code><a href="source-class-Tev.Plugin.Loader.html#229-243" title="Go to source code">loadOptionScreens</a>( )</code>
+			<code><a href="source-class-Tev.Plugin.Loader.html#235-249" title="Go to source code">loadOptionScreens</a>( )</code>
 
 			<div class="description short">
 				<p>Load custom option screens from configuration files.</p>
@@ -487,6 +488,39 @@ tev_fetch(<span class="php-quote">'plugin_loader'</span>)-&gt;load(__DIR__);</pr
 
 			<div class="description detailed hidden">
 				<p>Load custom option screens from configuration files.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Tev.Plugin.Loader.html">Tev\Plugin\Loader</a></code><br>This, for chaining
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="loadCliCommands" id="_loadCliCommands">
+
+			<td class="attributes"><code>
+				 protected 
+				<code><a href="class-Tev.Plugin.Loader.html">Tev\Plugin\Loader</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_loadCliCommands">#</a>
+			<code><a href="source-class-Tev.Plugin.Loader.html#251-265" title="Go to source code">loadCliCommands</a>( )</code>
+
+			<div class="description short">
+				<p>Load custom WP CLI commands from configuration files.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Load custom WP CLI commands from configuration files.</p>
 
 
 
@@ -512,7 +546,7 @@ tev_fetch(<span class="php-quote">'plugin_loader'</span>)-&gt;load(__DIR__);</pr
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getConfigPath">#</a>
-			<code><a href="source-class-Tev.Plugin.Loader.html#245-253" title="Go to source code">getConfigPath</a>( )</code>
+			<code><a href="source-class-Tev.Plugin.Loader.html#267-275" title="Go to source code">getConfigPath</a>( )</code>
 
 			<div class="description short">
 				<p>Get the path to the config directory.</p>
@@ -545,7 +579,7 @@ tev_fetch(<span class="php-quote">'plugin_loader'</span>)-&gt;load(__DIR__);</pr
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getSrcPath">#</a>
-			<code><a href="source-class-Tev.Plugin.Loader.html#255-263" title="Go to source code">getSrcPath</a>( )</code>
+			<code><a href="source-class-Tev.Plugin.Loader.html#277-285" title="Go to source code">getSrcPath</a>( )</code>
 
 			<div class="description short">
 				<p>Get the path to the config directory.</p>
@@ -578,7 +612,7 @@ tev_fetch(<span class="php-quote">'plugin_loader'</span>)-&gt;load(__DIR__);</pr
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getViewsPath">#</a>
-			<code><a href="source-class-Tev.Plugin.Loader.html#265-273" title="Go to source code">getViewsPath</a>( )</code>
+			<code><a href="source-class-Tev.Plugin.Loader.html#287-295" title="Go to source code">getViewsPath</a>( )</code>
 
 			<div class="description short">
 				<p>Get the path to the config directory.</p>
@@ -611,7 +645,7 @@ tev_fetch(<span class="php-quote">'plugin_loader'</span>)-&gt;load(__DIR__);</pr
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getPluginFile">#</a>
-			<code><a href="source-class-Tev.Plugin.Loader.html#275-283" title="Go to source code">getPluginFile</a>( )</code>
+			<code><a href="source-class-Tev.Plugin.Loader.html#297-305" title="Go to source code">getPluginFile</a>( )</code>
 
 			<div class="description short">
 				<p>Get the full path and filename of the plugin's registration file.</p>
@@ -644,7 +678,7 @@ tev_fetch(<span class="php-quote">'plugin_loader'</span>)-&gt;load(__DIR__);</pr
 
 			<td class="name"><div>
 			<a class="anchor" href="#_loadConfigFile">#</a>
-			<code><a href="source-class-Tev.Plugin.Loader.html#285-301" title="Go to source code">loadConfigFile</a>( <span>string <var>$file</var></span> )</code>
+			<code><a href="source-class-Tev.Plugin.Loader.html#307-323" title="Go to source code">loadConfigFile</a>( <span>string <var>$file</var></span> )</code>
 
 			<div class="description short">
 				<p>Load a config file from the config directory.</p>
@@ -693,7 +727,7 @@ tev_fetch(<span class="php-quote">'plugin_loader'</span>)-&gt;load(__DIR__);</pr
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Tev.Plugin.Loader.html#46-51" title="Go to source code"><var>$app</var></a>
+					<a href="source-class-Tev.Plugin.Loader.html#51-56" title="Go to source code"><var>$app</var></a>
 
 				<div class="description short">
 					<p>Application.</p>
@@ -718,7 +752,7 @@ tev_fetch(<span class="php-quote">'plugin_loader'</span>)-&gt;load(__DIR__);</pr
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Tev.Plugin.Loader.html#53-58" title="Go to source code"><var>$basePath</var></a>
+					<a href="source-class-Tev.Plugin.Loader.html#58-63" title="Go to source code"><var>$basePath</var></a>
 
 				<div class="description short">
 					<p>Plugin base path.</p>
@@ -743,7 +777,7 @@ tev_fetch(<span class="php-quote">'plugin_loader'</span>)-&gt;load(__DIR__);</pr
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Tev.Plugin.Loader.html#60-65" title="Go to source code"><var>$renderer</var></a>
+					<a href="source-class-Tev.Plugin.Loader.html#65-70" title="Go to source code"><var>$renderer</var></a>
 
 				<div class="description short">
 					<p>View renderer.</p>
