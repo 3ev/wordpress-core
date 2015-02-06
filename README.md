@@ -1,5 +1,9 @@
 # 3ev Core Wordpress library
 
+[![Latest Stable Version](https://poser.pugx.org/3ev/wordpress-core/v/stable.svg)](https://packagist.org/packages/3ev/wordpress-core)
+[![Total Downloads](https://poser.pugx.org/3ev/wordpress-core/downloads.svg)](https://packagist.org/packages/3ev/wordpress-core)
+[![License](https://poser.pugx.org/3ev/wordpress-core/license.svg)](https://packagist.org/packages/3ev/wordpress-core)
+
 This library provides a modern API for structuring and building plugins and
 themes in Wordpress, whilst keeping the familiar environment that Wordpress
 developers are used to.
