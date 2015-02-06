@@ -32,6 +32,11 @@ use Tev\Application\Application,
  *   the key is the shortcode name and the value is the config to pass
  *   to `add_shortcode`
  *
+ * - Custom WP CLI commands are loaded from an array, defined in `config/commands.php`
+ *   in the plugin's directory. The array is a set of key value pairs, where the
+ *   key is the command indentifier and the value is the fully-qualified class
+ *   name
+ *
  * Usage:
  *
  * ```php
@@ -95,7 +100,8 @@ class Loader
                 ->loadAcfJson()
                 ->loadActions()
                 ->loadShortCodes()
-                ->loadOptionScreens();
+                ->loadOptionScreens()
+                ->loadCliCommands();
     }
 
     /**
@@ -236,6 +242,22 @@ class Loader
         if (function_exists('acf_add_options_page') && ($config = $this->loadConfigFile('option_screens.php'))) {
             foreach ($config as $optionScreenConfig) {
                 acf_add_options_page($optionScreenConfig);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * Load custom WP CLI commands from configuration files.
+     *
+     * @return \Tev\Plugin\Loader This, for chaining
+     */
+    protected function loadCliCommands()
+    {
+        if (defined('WP_CLI') && WP_CLI && ($config = $this->loadConfigFile('commands.php'))) {
+            foreach ($config as $command => $className) {
+                \WP_CLI::add_command($command, $className);
             }
         }
 
