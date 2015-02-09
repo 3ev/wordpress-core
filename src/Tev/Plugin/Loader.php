@@ -2,6 +2,7 @@
 namespace Tev\Plugin;
 
 use Closure;
+use wpdb;
 use Tev\Application\Application,
     Tev\View\Renderer;
 
@@ -36,6 +37,10 @@ use Tev\Application\Application,
  *   in the plugin's directory. The array is a set of key value pairs, where the
  *   key is the command indentifier and the value is the fully-qualified class
  *   name
+ *
+ * - Custom database table installers are loaded from an array, defined in
+ *   `config/tables.php` in the plugin's directory. The array is a set of
+ *   fully-qualified installer class names
  *
  * Usage:
  *
@@ -95,6 +100,7 @@ class Loader
 
         return
             $this
+                ->loadCustomTables()
                 ->loadPostTypes()
                 ->loadFieldGroups()
                 ->loadAcfJson()
@@ -102,6 +108,36 @@ class Loader
                 ->loadShortCodes()
                 ->loadOptionScreens()
                 ->loadCliCommands();
+    }
+
+    /**
+     * Load custom database table installers from configuration files.
+     *
+     * @return \Tev\Plugin\Loader This, for chaining
+     */
+    protected function loadCustomTables()
+    {
+        if ($config = $this->loadConfigFile('tables.php')) {
+            $app = $this->app;
+
+            foreach ($config as $installerClass) {
+                if (is_string($installerClass) && is_subclass_of($installerClass, 'Tev\Database\CustomTables\AbstractInstaller')) {
+                    register_activation_hook($this->getPluginFile(), function () use ($installerClass, $app) {
+                        global $wpdb;
+                        $installer = new $installerClass($wpdb, $app);
+                        $installer->install();
+                    });
+
+                    add_action('plugins_loaded', function () use ($installerClass, $app) {
+                        global $wpdb;
+                        $installer = new $installerClass($wpdb, $app);
+                        $installer->update();
+                    });
+                }
+            }
+        }
+
+        return $this;
     }
 
     /**
