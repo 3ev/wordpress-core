@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Tev\Util\TemplateExtras | 3ev Core Wordpress library API</title>
+	<title>Class Tev\Database\CustomTables\AbstractInstaller | 3ev Core Wordpress library API</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?08b23951ef4599ca9cbf1f902d0e8290c9653ddd">
 	<link rel="stylesheet" href="resources/style.css?062e9e59e0b8c44fbaaded5b7ffc21f907b78669">
@@ -18,7 +18,7 @@
 				<div class="nav-collapse">
 					<ul class="nav">
 						<li>
-							<a href="namespace-Tev.Util.html" title="Summary of Tev\Util"><span>Namespace</span></a>
+							<a href="namespace-Tev.Database.CustomTables.html" title="Summary of Tev\Database\CustomTables"><span>Namespace</span></a>
 						</li>
 						<li class="active">
 <span>Class</span>						</li>
@@ -73,12 +73,12 @@
 						<a href="namespace-Tev.Contracts.html">
 							Contracts						</a>
 							</li>
-					<li class="main">
+					<li class="active main">
 						<a href="namespace-Tev.Database.html">
 							Database<span></span>
 						</a>
 							<ul>
-					<li class="main">
+					<li class="active main">
 						<a href="namespace-Tev.Database.CustomTables.html">
 							CustomTables						</a>
 							</li>
@@ -153,7 +153,7 @@
 							Repository						</a>
 							</li>
 								</ul></li>
-					<li class="active main">
+					<li class="main">
 						<a href="namespace-Tev.Util.html">
 							Util						</a>
 							</li>
@@ -178,7 +178,7 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li class="active"><a href="class-Tev.Util.TemplateExtras.html">TemplateExtras</a></li>
+				<li class="active"><a href="class-Tev.Database.CustomTables.AbstractInstaller.html">AbstractInstaller</a></li>
 			</ul>
 
 
@@ -194,11 +194,14 @@
 <div id="right">
 	<div id="rightInner">
 <div id="content" class="class">
-	<h1>Class TemplateExtras</h1>
+	<h1>Class AbstractInstaller</h1>
 
 
 	<div class="description">
-	<p>This class contains some useful extra template methods.</p>
+	<p>Run install scripts for custom database tables.</p>
+
+<p>See: http://codex.wordpress.org/Creating_Tables_with_Plugins for more
+information.</p>
 	</div>
 
 
@@ -210,12 +213,12 @@
 
 
 	<div class="alert alert-info">
+		<b>Abstract</b><br>
 		
-		
-		<b>Namespace:</b> <a href="namespace-Tev.html">Tev</a>\<a href="namespace-Tev.Util.html">Util</a><br>
+		<b>Namespace:</b> <a href="namespace-Tev.html">Tev</a>\<a href="namespace-Tev.Database.html">Database</a>\<a href="namespace-Tev.Database.CustomTables.html">CustomTables</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Tev.Util.TemplateExtras.html#8-308" title="Go to source code">Tev/Util/TemplateExtras.php</a>
+			<b>Located at</b> <a href="source-class-Tev.Database.CustomTables.AbstractInstaller.html#7-138" title="Go to source code">Tev/Database/CustomTables/AbstractInstaller.php</a>
 		<br>
 	</div>
 
@@ -234,7 +237,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Tev.Util.TemplateExtras.html#20-31" title="Go to source code">__construct</a>( <span><code><a href="class-Tev.Post.Factory.html">Tev\Post\Factory</a></code> <var>$postFactory</var></span> )</code>
+			<code><a href="source-class-Tev.Database.CustomTables.AbstractInstaller.html#29-42" title="Go to source code">__construct</a>( <span><code><a href="class-Tev.Database.CustomTables.AbstractInstaller.html#$wpdb">Tev\Database\CustomTables\AbstractInstaller::<var>$wpdb</var></a></code> <var>$wpdb</var></span>, <span><code><a href="class-Tev.Application.Application.html">Tev\Application\Application</a></code> <var>$app</var></span> )</code>
 
 			<div class="description short">
 				<p>Constructor.</p>
@@ -248,8 +251,10 @@
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$postFactory</var></dt>
-						<dd>Post object factory</dd>
+						<dt><var>$wpdb</var></dt>
+						<dd>WPDB API</dd>
+						<dt><var>$app</var></dt>
+						<dd>Application container</dd>
 					</dl></div>
 
 
@@ -259,85 +264,36 @@
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="breadcrumbs" id="_breadcrumbs">
+		<tr data-order="getSql" id="_getSql">
 
 			<td class="attributes"><code>
-				 public 
-				array
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_breadcrumbs">#</a>
-			<code><a href="source-class-Tev.Util.TemplateExtras.html#33-206" title="Go to source code">breadcrumbs</a>( <span>Closure|Closure[] <var>$callbacks</var> = <span class="php-keyword1">null</span></span> )</code>
-
-			<div class="description short">
-				<p>Generate an array of breadcrumbs, based on the current page.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Generate an array of breadcrumbs, based on the current page.</p>
-
-<p>Each item in the array is a hash containing 'title' and 'url' (which
-might be null).</p>
-
-<p>You can use this to generate nice breadcrumb lists in your page.</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$callbacks</var></dt>
-						<dd><p>Set of user-defined callbacks that can
-                            return breadcrumbs. If any of the supplied callbacks
-                            return data, then their data will be used rather than
-                            the defaults supplied by this method. Note that
-                            the initial 'Home' crumb is always included</p></dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						array
-					</div>
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="partial" id="_partial">
-
-			<td class="attributes"><code>
-				 public 
+				abstract protected 
 				string
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_partial">#</a>
-			<code><a href="source-class-Tev.Util.TemplateExtras.html#208-233" title="Go to source code">partial</a>( <span>string <var>$file</var></span>, <span>array <var>$variables</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<a class="anchor" href="#_getSql">#</a>
+			<code><a href="source-class-Tev.Database.CustomTables.AbstractInstaller.html#44-53" title="Go to source code">getSql</a>( )</code>
 
 			<div class="description short">
-				<p>Render a view partial.</p>
+				<p>Return the SQL statement that will install/update the database for
+this installer.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Render a view partial.</p>
+				<p>Return the SQL statement that will install/update the database for
+this installer.</p>
+
+<p>See http://codex.wordpress.org/Creating_Tables_with_Plugins#Creating_or_Updating_the_Table
+for SQL idiosyncrasies in Wordpress.</p>
 
 
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$file</var></dt>
-						<dd>Partial file name</dd>
-						<dt><var>$variables</var></dt>
-						<dd>$params Optional variables to make available to partial</dd>
-					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						string<br>Rendered partial
+						string<br>SQL string
 					</div>
 
 
@@ -346,50 +302,124 @@ might be null).</p>
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="archiveTitle" id="_archiveTitle">
+		<tr data-order="getVersion" id="_getVersion">
 
 			<td class="attributes"><code>
-				 public 
+				abstract protected 
 				string
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_archiveTitle">#</a>
-			<code><a href="source-class-Tev.Util.TemplateExtras.html#235-287" title="Go to source code">archiveTitle</a>( <span>array <var>$config</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<a class="anchor" href="#_getVersion">#</a>
+			<code><a href="source-class-Tev.Database.CustomTables.AbstractInstaller.html#55-62" title="Go to source code">getVersion</a>( )</code>
 
 			<div class="description short">
-				<p>Get a nice title for an archive page.</p>
+				<p>Get the current database version.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Get a nice title for an archive page.</p>
+				<p>Get the current database version.</p>
 
-<p>Will return nice titles for taxonomy or date archive pages.</p>
-
-<p>Optionally config this method with formatting:</p>
-
-<ul>
-<li>default ('Archive'): Title to display if archive page is not date or taxonomy</li>
-<li>prefix (''): Text to prefix your title with</li>
-<li>suffix (''): Text to suffix your title with</li>
-<li>year_format ('Y'): Date format for 'year' archive pages</li>
-<li>month_format ('F Y'): Date format for 'month' archive pages</li>
-<li>day_format ('js F Y'): Date format for 'day' archive pages</li>
-</ul>
+<p>Should be updated every time the database needs to be updated.</p>
 
 
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$config</var></dt>
-						<dd>Optional formatting config, as described above</dd>
-					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						string<br>Archive title
+						string<br>Semver string, like 1.0.0
 					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="install" id="_install">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_install">#</a>
+			<code><a href="source-class-Tev.Database.CustomTables.AbstractInstaller.html#64-72" title="Go to source code">install</a>( )</code>
+
+			<div class="description short">
+				<p>Install the database for this first.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Install the database for this first.</p>
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="update" id="_update">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_update">#</a>
+			<code><a href="source-class-Tev.Database.CustomTables.AbstractInstaller.html#74-84" title="Go to source code">update</a>( )</code>
+
+			<div class="description short">
+				<p>Update the database if it's out of date.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Update the database if it's out of date.</p>
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="run" id="_run">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_run">#</a>
+			<code><a href="source-class-Tev.Database.CustomTables.AbstractInstaller.html#86-101" title="Go to source code">run</a>( )</code>
+
+			<div class="description short">
+				<p>Run database scripts.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Run database scripts.</p>
+
+<p>See http://codex.wordpress.org/Creating_Tables_with_Plugins#Creating_or_Updating_the_Table
+for SQL idiosyncrasies in Wordpress.</p>
+
+
+
 
 
 
@@ -404,6 +434,65 @@ might be null).</p>
 		<h3>Magic methods summary</h3>
 
 
+
+
+
+
+
+
+		<h2>Properties summary</h2>
+		<table class="summary table table-bordered table-striped properties" id="properties">
+		<tr data-order="wpdb" id="$wpdb">
+			<td class="attributes"><code>
+				protected  
+				wpdb
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Tev.Database.CustomTables.AbstractInstaller.html#15-20" title="Go to source code"><var>$wpdb</var></a>
+
+				<div class="description short">
+					<p>WPDB API.</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>WPDB API.</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$wpdb" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="app" id="$app">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-Tev.Application.Application.html">Tev\Application\Application</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Tev.Database.CustomTables.AbstractInstaller.html#22-27" title="Go to source code"><var>$app</var></a>
+
+				<div class="description short">
+					<p>Application container.</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>Application container.</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$app" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		</table>
 
 
 
