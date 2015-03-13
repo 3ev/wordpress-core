@@ -48,9 +48,15 @@ class TemplateExtras
     public function breadcrumbs($callbacks = null)
     {
         $breadcrumbs = array();
-        $blogPage    = $this->postFactory->create(get_page(get_option('page_for_posts')));
 
-        // Home page is always present
+        // Load blog page - it's used later, if configured
+
+        $blogPage = null;
+        if ($bp = get_page(get_option('page_for_posts'))) {
+            $blogPage = $this->postFactory->create($bp);
+        }
+
+        // Home page is always present in breadcrumb trail
 
         $breadcrumbs[] = array(
             'title' => 'Home',
@@ -79,7 +85,7 @@ class TemplateExtras
 
             // Blog home page (when different to front page)
 
-            if (is_home() && !is_front_page()) {
+            if ($blogPage && is_home() && !is_front_page()) {
                 $breadcrumbs[] = array(
                     'title' => $blogPage->getTitle(),
                     'url'   => null
@@ -114,7 +120,7 @@ class TemplateExtras
                 // Normal post archive
 
                 else {
-                    if (!$this->isBlogPageHome()) {
+                    if ($blogPage && !$this->isBlogPageHome()) {
                         $breadcrumbs[] = array(
                             'title' => $blogPage->getTitle(),
                             'url'   => $blogPage->getUrl()
@@ -152,7 +158,7 @@ class TemplateExtras
 
             if (is_single()) {
                 if (is_singular('post')) {
-                    if (!$this->isBlogPageHome()) {
+                    if ($blogPage && !$this->isBlogPageHome()) {
                         $breadcrumbs[] = array(
                             'title' => $blogPage->getTitle(),
                             'url'   => $blogPage->getUrl()
@@ -293,7 +299,7 @@ class TemplateExtras
      */
     private function isBlogPageHome()
     {
-        return get_option('page_on_front') === get_option('page_for_posts');
+        return !get_option('page_for_posts') ?: get_option('page_on_front') === get_option('page_for_posts');
     }
 
     /**
