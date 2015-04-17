@@ -224,6 +224,16 @@ abstract class AbstractPost implements WordpressWrapperInterface
     }
 
     /**
+     * Check if this post has a manually set excerpt.
+     *
+     * @return boolean True if has excerpt, false if not
+     */
+    public function hasExcerpt()
+    {
+        return (boolean) strlen($this->base->post_excerpt);
+    }
+
+    /**
      * Get the post excerpt.
      *
      * Adapted from wp_trim_excerpt() in wp-includes/formatting.php.
