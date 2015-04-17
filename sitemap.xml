@@ -87,18 +87,144 @@
 
 
 <url>
-	<loc>http://3ev.github.io/wordpress-core/function-tev_app.html</loc>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Application.Application.html</loc>
 </url>
 <url>
-	<loc>http://3ev.github.io/wordpress-core/function-tev_fetch.html</loc>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Application.Bootstrap.AuthorFactory.html</loc>
 </url>
 <url>
-	<loc>http://3ev.github.io/wordpress-core/function-tev_partial.html</loc>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Application.Bootstrap.FieldFactory.html</loc>
 </url>
 <url>
-	<loc>http://3ev.github.io/wordpress-core/function-tev_post_factory.html</loc>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Application.Bootstrap.PluginLoader.html</loc>
 </url>
 <url>
-	<loc>http://3ev.github.io/wordpress-core/function-tev_post_factory_register.html</loc>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Application.Bootstrap.Post.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Application.Bootstrap.Taxonomy.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Application.Bootstrap.Term.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Application.Bootstrap.Util.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Author.Factory.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Author.Model.Author.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Database.CustomTables.AbstractInstaller.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Database.Utils.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Field.Factory.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Field.Model.AbstractField.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Field.Model.BasicField.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Field.Model.DateField.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Field.Model.FileField.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Field.Model.FlexibleContentField.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Field.Model.GoogleMapField.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Field.Model.ImageField.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Field.Model.NullField.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Field.Model.PostField.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Field.Model.RepeaterField.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Field.Model.SelectField.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Field.Model.TaxonomyField.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Field.Util.FieldGroup.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Field.Util.LayoutFieldGroup.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Plugin.Action.AbstractProvider.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Plugin.Loader.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Plugin.Shortcode.AbstractProvider.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Post.Factory.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Post.Model.AbstractPost.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Post.Model.Attachment.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Post.Model.Page.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Post.Model.Post.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Post.Repository.PostRepository.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Taxonomy.Factory.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Taxonomy.Model.Taxonomy.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Taxonomy.Repository.TaxonomyRepository.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Term.Factory.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Term.Model.Term.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Term.Repository.TermRepository.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Util.TemplateExtras.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.View.Renderer.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Contracts.BootstrapperInterface.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.Contracts.WordpressWrapperInterface.html</loc>
+</url>
+<url>
+	<loc>http://3ev.github.io/wordpress-core/class-Tev.View.Exception.NotFoundException.html</loc>
 </url>
 </urlset>
