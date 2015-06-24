@@ -122,6 +122,17 @@ class Author implements WordpressWrapperInterface
     }
 
     /**
+     * Get a meta field value for this author.
+     *
+     * @param  string $field Field name
+     * @return string        Field data. Empty string if field does not exist
+     */
+    public function getMeta($field)
+    {
+        return get_the_author_meta($field, $this->getId());
+    }
+
+    /**
      * Get the underlying `WP_User` object.
      *
      * @return \WP_User
