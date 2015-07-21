@@ -7,7 +7,8 @@ use Tev\Application\Application,
     Tev\Field\Model\PostField,
     Tev\Field\Model\TaxonomyField,
     Tev\Field\Model\RepeaterField,
-    Tev\Field\Model\FlexibleContentField;
+    Tev\Field\Model\FlexibleContentField,
+    Tev\Field\Model\AuthorField;
 
 /**
  * Bootstrap the field factory.
@@ -60,6 +61,9 @@ class FieldFactory implements BootstrapperInterface
                         $app->fetch('taxonomy_factory'),
                         $app->fetch('term_factory')
                     );
+                })
+                ->register('user', function ($data, $app) {
+                    return new AuthorField($data, $app->fetch('author_factory'));
                 })
 
                 // Collection fields
