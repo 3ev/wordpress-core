@@ -133,6 +133,18 @@ class Author implements WordpressWrapperInterface
     }
 
     /**
+     * Get an image tag for this author's avatar.
+     *
+     * @param  int    $size Avatar size. Max 512, default 96
+     * @param  string $alt  Alt text. Defaults to display name
+     * @return string
+     */
+    public function getAvatarTag($size = 96, $alt = null)
+    {
+        return get_avatar($this->getId(), $size, null, $alt ?: $this->getDisplayName());
+    }
+
+    /**
      * Get the underlying `WP_User` object.
      *
      * @return \WP_User
