@@ -46,6 +46,7 @@ class FieldFactory implements BootstrapperInterface
                 ->register('radio',        'Tev\Field\Model\SelectField')
                 ->register('google_map',   'Tev\Field\Model\GoogleMapField')
                 ->register('image',        'Tev\Field\Model\ImageField')
+                ->register('number',        'Tev\Field\Model\NumberField')
 
                 // Post and other relationship fields
 
