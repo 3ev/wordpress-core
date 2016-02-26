@@ -8,6 +8,12 @@ This library provides a modern API for structuring and building plugins and
 themes in Wordpress, whilst keeping the familiar environment that Wordpress
 developers are used to.
 
+## Versions
+
+This branch contains work-in-progress support for Wordpress `4.4`, and is
+backwards incompatible with earlier Wordpress versions. Use a `1.x` version of
+this package for Wordpress `<= 4.3` support.
+
 ## Installation
 
 Add the library to your `composer.json`:
