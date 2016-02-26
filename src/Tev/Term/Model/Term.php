@@ -1,7 +1,7 @@
 <?php
 namespace Tev\Term\Model;
 
-use stdClass;
+use WP_Term;
 
 use Tev\Contracts\WordpressWrapperInterface,
     Tev\Term\Factory as TermFactory,
@@ -17,7 +17,7 @@ class Term implements WordpressWrapperInterface
     /**
      * Base term oject.
      *
-     * @var \stdClass
+     * @var \WP_Term
      */
     private $base;
 
@@ -47,12 +47,12 @@ class Term implements WordpressWrapperInterface
      *
      * Inject dependencies.
      *
-     * @param  \stdClass                    $base        Base term oject
+     * @param  \WP_Term                     $base        Base term oject
      * @param  \Tev\Taxonomy\Model\Taxonomy $taxonomy    Term taxonomy
      * @param  \Tev\Term\Factory            $termFactory Term factory
      * @return void
      */
-    public function __construct(stdClass $base,
+    public function __construct(WP_Term $base,
                                 Taxonomy $taxonomy,
                                 TermFactory $termFactory)
     {
@@ -99,7 +99,7 @@ class Term implements WordpressWrapperInterface
      */
     public function getTaxonomy()
     {
-       return $this->taxonomy;
+        return $this->taxonomy;
     }
 
     /**
@@ -181,7 +181,7 @@ class Term implements WordpressWrapperInterface
     /**
      * Get the underlying term object.
      *
-     * @return \stdClass
+     * @return \WP_Term
      */
     public function getBaseObject()
     {

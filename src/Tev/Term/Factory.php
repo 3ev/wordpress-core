@@ -2,8 +2,8 @@
 namespace Tev\Term;
 
 use Exception;
-use stdClass;
 use WP_Error;
+use WP_Term;
 
 use Tev\Term\Model\Term,
     Tev\Taxonomy\Model\Taxonomy;
@@ -18,7 +18,7 @@ class Factory
     /**
      * Create a new Term object.
      *
-     * @param  int|\stdClass                $term     Term ID or term object
+     * @param  int|\WP_Term                 $term     Term ID or term object
      * @param  \Tev\Taxonomy\Model\Taxonomy $taxonomy Term taxonomy
      * @return \Tev\Term\Model\Term                   Term object
      *
@@ -26,7 +26,7 @@ class Factory
      */
     public function create($term, Taxonomy $taxonomy)
     {
-        if (!($term instanceof stdClass)) {
+        if (!($term instanceof WP_Term)) {
             $term = get_term($term, $taxonomy->getName());
         }
 
