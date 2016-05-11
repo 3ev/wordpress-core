@@ -7,6 +7,16 @@ namespace Tev\Post\Model;
 class Attachment extends AbstractPost
 {
     /**
+     * Get attachment URL.
+     *
+     * @return string
+     */
+    public function getAttachmentUrl()
+    {
+        return wp_get_attachment_url($this->getId());
+    }
+
+    /**
      * Get attachment image URL.
      *
      * @param  mixed       $size Arguments accepted by second param of wp_get_attachment_image_src()
