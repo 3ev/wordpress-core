@@ -9,9 +9,7 @@ keeping the familiar environment that Wordpress developers are used to.
 
 ##Versions
 
-This branch contains work-in-progress support for Wordpress `4.4`, and is
-backwards incompatible with earlier Wordpress versions. Use a `1.x` version of
-this package for Wordpress `<= 4.3` support.
+From version `2.0.0`, this packages supports Wordpress 4.4 or newever. Use a `1.x` version of this package for Wordpress `<= 4.3` support.
 
 ##Installation
 
