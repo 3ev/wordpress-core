@@ -16,6 +16,17 @@ class Attachment extends AbstractPost
         return wp_get_attachment_url($this->getId());
     }
 
+
+    /**
+     * Get attachment file.
+     *
+     * @return string
+     */
+    public function getAttachmentFile()
+    {
+        return get_attached_file($this->getId());
+    }
+
     /**
      * Get attachment image URL.
      *
