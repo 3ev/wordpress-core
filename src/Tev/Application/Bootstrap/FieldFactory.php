@@ -47,6 +47,7 @@ class FieldFactory implements BootstrapperInterface
                 ->register('google_map',   'Tev\Field\Model\GoogleMapField')
                 ->register('image',        'Tev\Field\Model\ImageField')
                 ->register('number',        'Tev\Field\Model\NumberField')
+                ->register('gallery',      'Tev\Field\Model\GalleryField')
 
                 // Post and other relationship fields
 
