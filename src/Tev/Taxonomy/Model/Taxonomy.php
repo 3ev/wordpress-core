@@ -1,7 +1,7 @@
 <?php
 namespace Tev\Taxonomy\Model;
 
-use stdClass;
+use WP_Taxonomy;
 
 use Tev\Contracts\WordpressWrapperInterface,
     Tev\Term\Factory as TermFactory,
@@ -35,7 +35,7 @@ class Taxonomy implements WordpressWrapperInterface
      * @param  \Tev\Term\Factory $termFactory Term factory
      * @return void
      */
-    public function __construct(stdClass $base,
+    public function __construct(WP_Taxonomy $base,
                                 TermFactory $termFactory)
     {
         $this->base        = $base;
